@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">readycheck</string>
 
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="account_settings">Settings</string>
+    <string name="drawer_open">SettingsOpen</string>
+    <string name="drawer_close">SettingsClose</string>
 </resources>
