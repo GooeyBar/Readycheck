@@ -1,5 +1,6 @@
 package gtsioni.dtsioni.crejaud.readycheck;
 
+import android.content.res.Configuration;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -29,6 +30,7 @@ public class MainActivity extends ActionBarActivity {
         accountActivityTitle = getTitle().toString();
 
         accountList = (ListView)findViewById(R.id.accountList);
+        setUpDrawer();
         addDrawerItems();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
@@ -80,6 +82,18 @@ public class MainActivity extends ActionBarActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState){
+        super.onPostCreate(savedInstanceState);
+        accountDrawerToggle.syncState();
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig){
+        super.onConfigurationChanged(newConfig);
+        accountDrawerToggle.onConfigurationChanged(newConfig);
     }
 }
 
