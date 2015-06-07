@@ -37,7 +37,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void addDrawerItems(){
-        String[] items = {"Do Not Disturb","Sign Out"};
+        String[] items = {"Account", "Do Not Disturb", "Sign Out"};
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
         accountList.setAdapter(adapter);
     }
