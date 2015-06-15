@@ -311,6 +311,7 @@ public class LoginActivity extends FragmentActivity implements
 
         Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
+        Toast.makeText(getApplicationContext(), "Signed in as " + currentUser.getDisplayName(), Toast.LENGTH_LONG).show();
     }
 
     /* onConnectionFailed is called when our Activity could not connect to Google
