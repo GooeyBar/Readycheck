@@ -308,6 +308,9 @@ public class LoginActivity extends FragmentActivity implements
 
         // Indicate that the sign in process is complete.
         mSignInProgress = STATE_DEFAULT;
+
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
     }
 
     /* onConnectionFailed is called when our Activity could not connect to Google
